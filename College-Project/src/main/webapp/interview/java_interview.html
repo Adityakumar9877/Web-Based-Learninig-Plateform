@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+        *{
+            width: 1000px;
+            
+        }
+        body{
+            font-family: 'Ysabeau', sans-serif;
+        }
+        .container {
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-flow:column wrap;
+            gap: 20px;
+            
+        
+           
+        }
+
+        .container div {
+            text-align: justify;
+            padding: 1px 20px;
+            border: 0.5px solid rgba(255, 0, 0, 0.59);
+           border-top: none;
+           border-radius: 30px;
+           
+        }
+
+        div>h3 {
+            color: red;
+            text-shadow: 1px 1px 10px white;
+        }
+
+        div p {
+            color: black;
+            text-shadow: 1px 1px 10px white;
+        }
+
+        .main {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <p class="main">Dear readers, these HTML5 Interview Questions have been designed specially to get you acquainted
+            with the
+            nature of questions you may encounter during your interview for the subject of HTML5. As per my experience
+            good interviewers hardly plan to ask any particular question during your interview, normally questions start
+            with some basic concept of the subject and later they continue based on further discussion and what you
+            answer:</p>
+        <div>
+            <h3>What is Java? </h3>
+            <p>Java is a high-level programming language that was developed by James Gosling in the year 1982. It is based on the principles of object-oriented programming and can be used to develop large-scale applications. </p>
+        </div>
+        <div>
+            <h3>Why is Java a platform independent language?</h3>
+            <p>Java language was developed in such a way that it does not depend on any hardware or software due to the fact that the compiler compiles the code and then converts it to platform-independent byte code which can be run on multiple systems.</p>
+            <p>The only condition to run that byte code is for the machine to have a runtime environment (JRE) installed in it</p>
+        </div>
+        <div>
+            <h3>Why is Java not a pure object oriented language?</h3>
+            <p>Java supports primitive data types - byte, boolean, char, short, int, float, long, and double and hence it is not a pure object oriented language</p>
+        </div>
+        <div>
+            <h3>Difference between Heap and Stack Memory in java. And how java utilizes this.</h3>
+            <p>Stack memory is the portion of memory that was assigned to every individual program. And it was fixed. On the other hand, Heap memory is the portion that was not allocated to the java program but it will be available for use by the java program when it is required, mostly during the runtime of the program.</p>
+        </div>
+        <div>
+            <h3>Can java be said to be the complete object-oriented programming language?</h3>
+            <p>It is not wrong if we claim that java is the complete object-oriented programming language. Because Everything in Java is under the classes. And we can access that by creating the objects.</p>
+            <p>But also if we say that java is not a completely object-oriented programming language because it has the support of primitive data types like int, float, char, boolean, double, etc.</p>
+            <p>Now for the question: Is java a completely object-oriented programming language? We can say that - Java is not a pure object-oriented programming language, because it has direct access to primitive data types. And these primitive data types don't directly belong to the Integer classes</p>
+        </div>
+        <div>
+            <h3>How is Java different from C++?</h3>
+            <p>C++ is only a  compiled language, whereas Java is compiled as well as an interpreted language.</p>
+            <p>Java programs are machine-independent whereas a c++ program can run only in the machine in which it is compiled. </p>
+            <p>C++ supports the concept of Multiple inheritances whereas Java doesn't support this. And it is due to avoiding the complexity of name ambiguity that causes the diamond problem</p>
+            <p>C++ allows users to use pointers in the program. Whereas java doesn’t allow it. Java internally uses pointers.</p>
+                
+        </div>
+        <div>
+            <h3>Tell us something about JIT compiler.</h3>
+            <p>JIT stands for Just-In-Time and it is used for improving the performance during run time. It does the task of compiling parts of byte code having similar functionality at the same time thereby reducing the amount of compilation time for the code to run.</p>
+            <p>The compiler is nothing but a translator of source code to machine-executable code. But what is special about the JIT compiler? Let us see how it works:</p>
+            <p>First, the Java source code (.java) conversion to byte code (.class) occurs with the help of the javac compiler</p>
+            <p>Then, the .class files are loaded at run time by JVM and with the help of an interpreter, these are converted to machine understandable code.</p>
+            <p>JIT compiler is a part of JVM. When the JIT compiler is enabled, the JVM analyzes the method calls in the .class files and compiles them to get more efficient and native code. It also ensures that the prioritized method calls are optimized.</p>
+            <p>Once the above step is done, the JVM executes the optimized code directly instead of interpreting the code again. This increases the performance and speed of the execution.</p>
+        </div>
+        <div>
+            <h3>Can you tell the difference between equals() method and equality operator (==) in Java?</h3>
+            <p>We are already aware of the (==) equals operator. That we have used this to compare the equality of the values. But when we talk about the terms of object-oriented programming, we deal with the values in the form of objects. And this object may contain multiple types of data. So using the (==) operator does not work in this case. So we need to go with the .equals() method.</p>
+            <p>Both [(==) and .equals()] primary functionalities are to compare the values, but the secondary functionality is different. </p>
+        </div>
+        <div>
+            <h3>Briefly explain the concept of constructor overloading</h3>
+            <p>Constructor overloading is the process of creating multiple constructors in the class consisting of the same name with a difference in the constructor parameters. Depending upon the number of parameters and their corresponding types, distinguishing of the different types of constructors is done by the compiler.</p>
+            <p>class Hospital { <br>
+                int variable1, variable2; <br>
+                double variable3; <br>
+                public Hospital(int doctors, int nurses) { <br>
+                 variable1 = doctors; <br>
+                 variable2 = nurses; <br>
+                } <br>
+                public Hospital(int doctors) { <br>
+                 variable1 = doctors; <br>
+                } <br>
+                public Hospital(double salaries) { <br>
+                 variable3 = salaries <br>
+                } <br>
+                }</p>
+        </div>
+        <div>
+            <h3>Define Copy constructor in java.W</h3>
+            <p>Copy Constructor is the constructor used when we want to initialize the value to the new object from the old object of the same class. </p>
+            <p>class InterviewBit{ <br>
+                String department; <br>
+                String service; <br>
+                InterviewBit(InterviewBit ib){ <br>
+                    this.departments = ib.departments; <br>
+                    this.services = ib.services; <br>
+                } <br>
+             }</p>
+        </div>
+        <div>
+            <h3>Why is the main method static in Java?</h3>
+            <p>The main method is always static because static members are those methods that belong to the classes, not to an individual object. So if the main method will not be static then for every object, It is available. And that is not acceptable by JVM. JVM calls the main method based on the class name itself. Not by creating the object..</p>
+            <p>Because there must be only 1 main method in the java program as the execution starts from the main method. So for this reason the main method is static.</p>
+        </div>
+        <div>
+            <h3>What do we get in the JDK file?/h3>
+            <p><b>JDK-</b> For making java programs, we need some tools that are provided by JDK (Java Development Kit). JDK is the package that contains various tools, Compiler, Java Runtime Environment, etc.</p>
+            <p><b>JRE -</b>  To execute the java program we need an environment. (Java Runtime Environment) JRE contains a library of Java classes +  JVM. What are JAVA Classes?  It contains some predefined methods that help Java programs to use that feature, build and execute. For example - there is a system class in java that contains the print-stream method, and with the help of this, we can print something on the console.</p>
+            <p><b>JVM -</b> (Java Virtual Machine) JVM  is a part of JRE that executes the Java program at the end.  Actually, it is part of JRE, but it is software that converts bytecode into machine-executable code to execute on hardware</p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

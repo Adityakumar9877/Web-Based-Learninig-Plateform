@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+        *{
+            width: 1000px;
+            
+        }
+        body{
+            font-family: 'Ysabeau', sans-serif;
+        }
+        .container {
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-flow:column wrap;
+            gap: 20px;
+            
+        
+           
+        }
+
+        .container div {
+            text-align: justify;
+            padding: 1px 20px;
+            border: 0.5px solid rgba(255, 0, 0, 0.59);
+           border-top: none;
+           border-radius: 30px;
+           
+        }
+
+        div>h3 {
+            color: red;
+            text-shadow: 1px 1px 10px white;
+        }
+
+        div p {
+            color: black;
+            text-shadow: 1px 1px 10px white;
+        }
+
+        .main {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <p class="main">Dear readers, these HTML5 Interview Questions have been designed specially to get you acquainted
+            with the
+            nature of questions you may encounter during your interview for the subject of HTML5. As per my experience
+            good interviewers hardly plan to ask any particular question during your interview, normally questions start
+            with some basic concept of the subject and later they continue based on further discussion and what you
+            answer:</p>
+        <div>
+            <h3> What is Database?</h3>
+            <p>A database is an organized collection of data, stored and retrieved digitally from a remote or local computer system. Databases can be vast and complex, and such databases are developed using fixed design and modeling approaches</p>
+        </div>
+        <div>
+            <h3>What is DBMS?</h3>
+            <p>DBMS stands for Database Management System. DBMS is a system software responsible for the creation, retrieval, updation, and management of the database. It ensures that our data is consistent, organized, and is easily accessible by serving as an interface between the database and its end-users or application software</p>
+        </div>
+        <div>
+            <h3>What is RDBMS? How is it different from DBMS?</h3>
+            <p>RDBMS stands for Relational Database Management System. The key difference here, compared to DBMS, is that RDBMS stores data in the form of a collection of tables, and relations can be defined between the common fields of these tables. Most modern database management systems like MySQL, Microsoft SQL Server, Oracle, IBM DB2, and Amazon Redshift are based on RDBMS.</p>
+        </div>
+        <div>
+            <h3>What is SQL?</h3>
+            <p>SQL stands for Structured Query Language. It is the standard language for relational database management systems. It is especially useful in handling organized data comprised of entities (variables) and relations between different entities of the data</p>
+        </div>
+        <div>
+            <h3>What is the difference between SQL and MySQL?</h3>
+            <p>SQL is a standard language for retrieving and manipulating structured databases. On the contrary, MySQL is a relational database management system, like SQL Server, Oracle or IBM DB2, that is used to manage SQL databases.</p>
+        </div>
+        <div>
+            <h3>What are Tables and Fields?</h3>
+            <p>A table is an organized collection of data stored in the form of rows and columns. Columns can be categorized as vertical and rows as horizontal. The columns in a table are called fields while the rows can be referred to as records.</p>
+        </div>
+        <div>
+            <h3>What are Constraints in SQL?</h3>
+            <p>Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are:</p>
+            <p><b># NOT NULL</b> - Restricts NULL value from being inserted into a  <br>
+                <b># CHECK</b> - Verifies that all values in a field satisfy a condition. <br>
+                <b># DEFAULT</b> - Automatically assigns a default value if no value has been specified for the field. <br>
+                <b># UNIQUE </b>- Ensures unique values to be inserted into the field. <br>
+                <b># INDEX</b> - Indexes a field providing faster retrieval of records. <br>
+                <b># PRIMARY KEY</b> - Uniquely identifies each record in a table. <br>
+                <b># FOREIGN KEY </b>- Ensures referential integrity for a record in another table.</p>
+        </div>
+        <div>
+            <h3>What is a Primary Key?</h3>
+            <p>The PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint.
+                A table in SQL is strictly restricted to have one and only one primary key, which is comprised of single or multiple fields (columns).</p>
+                <p>CREATE TABLE Students (   /* Create table with a single field as primary key */ <br>
+                    ID INT NOT NULL <br>
+                    Name VARCHAR(255) <br>
+                    PRIMARY KEY (ID) <br>
+                 );</p>
+        </div>
+        <div>
+            <h3>What is a Foreign Key?</h3>
+            <p>A FOREIGN KEY comprises of single or collection of fields in a table that essentially refers to the PRIMARY KEY in another table. Foreign key constraint ensures referential integrity in the relation between two tables.
+                The table with the foreign key constraint is labeled as the child table, and the table containing the candidate key is labeled as the referenced or parent table.</p>
+                <p>CREATE TABLE Students (   /* Create table with foreign key - Way 1 */ <br>
+                    ID INT NOT NULL <br>
+                    Name VARCHAR(255) <br>
+                    LibraryID INT <br>
+                    PRIMARY KEY (ID) <br>
+                    FOREIGN KEY (Library_ID) REFERENCES Library(LibraryID) <br>
+                 );</p>
+        </div>
+        <div>
+            <h3>What is a Join? List its different types.</h3>
+            <p>The SQL Join clause is used to combine records (rows) from two or more tables in a SQL database based on a related column between the two..</p>
+            <p>There are four different types of JOINs in SQL:</p>
+            <p><b>(INNER) JOIN:</b> Retrieves records that have matching values in both tables involved in the join. This is the widely used join for queries.</p>
+            <p>SELECT * <br>
+                FROM Table_A <br>
+                JOIN Table_B; <br>
+                SELECT * <br>
+                FROM Table_A <br>
+                INNER JOIN Table_B;</p> <br>
+                <p><b>LEFT (OUTER) JOIN:</b>Retrieves all the records/rows from the left and the matched records/rows from the right table.</p>
+                <p>SELECT * <br>
+                    FROM Table_A A <br>
+                    LEFT JOIN Table_B B <br>
+                    ON A.col = B.col;</p> 
+                    <p><b>RIGHT (OUTER) JOIN:</b>Retrieves all the records/rows from the right and the matched records/rows from the left table.</p>
+                    <p>SELECT * <br>
+                        FROM Table_A A <br>
+                        RIGHT JOIN Table_B B <br>
+                        ON A.col = B.col;</p>
+                        <p><b>FULL (OUTER) JOIN:</b>Retrieves all the records where there is a match in either the left or right table.</p>
+                        <p>SELECT * <br>
+                            FROM Table_A A <br>
+                            FULL JOIN Table_B B <br>
+                            ON A.col = B.col;</p>
+                        
+                        
+        </div>
+        <div>
+            <h3>What is a Self-Join?</h3>
+            <p>A self JOIN is a case of regular join where a table is joined to itself based on some relation between its own column(s). Self-join uses the INNER JOIN or LEFT JOIN clause and a table alias is used to assign different names to the table within the query.</p>
+            <p>SELECT A.emp_id AS "Emp_ID",A.emp_name AS "Employee", <br>
+                B.emp_id AS "Sup_ID",B.emp_name AS "Supervisor" <br>
+                FROM employee A, employee B <br>
+                WHERE A.emp_sup = B.emp_id;</p>
+        </div>
+        <div>
+            <h3>What is a Cross-Join?</h3>
+            <p>Cross join can be defined as a cartesian product of the two tables included in the join. The table after join contains the same number of rows as in the cross-product of the number of rows in the two tables. If a WHERE clause is used in cross join then the query will work like an INNER JOIN.</p>
+            <p>SELECT stu.name, sub.subject <br>
+                FROM students AS stu <br>
+                CROSS JOIN subjects AS sub;</p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

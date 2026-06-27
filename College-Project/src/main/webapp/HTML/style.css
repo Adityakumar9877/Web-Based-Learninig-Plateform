@@ -1,0 +1,30 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@800&display=swap');
+
+
+
+*{
+    margin: 0px;padding: 0;box-sizing: border-box;
+    /* text-align: justify; */
+   width: 1000px;
+    font-family: 'Ysabeau', sans-serif;
+   
+   
+   
+}
+body{
+    background-color: beige;
+}
+.content{
+    color: rgb(84, 82, 82);
+    text-align: justify;
+    /* line-height: 2; */
+    margin-left: 40px;
+    line-height: 40px;
+    font-size: 20px;
+   
+}
+.content p{
+    font-size: 1px;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tutorial</title>
+  <link rel="stylesheet" href="html.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="toggle.css">
+  <link rel="stylesheet" href="js.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <nav>
+            <div class="logo">
+              <a href="#">Tech<span>Yantra</span></a>
+            </div>
+            <input style="visibility: hidden;" type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+              <!-- <label for="menu-toggle" class="menu-icon">&#9776</label> -->
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#">Tutorials</a>
+                <ul>
+                  <li><a href="html.html">Web Development</a> </li>
+                  <li><a href="java.html">Programming Languages</a></li>
+                  <li><a href="sql.html">Databases</a></li>
+                </ul>
+              </li>
+              <li><a href="interview/interview.html">Interview Questions</a></li>
+              <li><a href="code_editor/code_editor.html">Code Editor</a></li>
+              <li><a href="#">Tools</a></li>
+              <li style="visibility: hidden;"><a href="#">Forum</a></li>
+            </ul>
+          </nav>    
+      
+   </header>
+  
+   <main >
+    <section class="main">
+
+      <div class="content" id="#array">
+        <h2><b># Array</b></h2>
+        <li>JavaScript array is an object that represents a collection of similar type of elements.</li>
+        <ul type="none">
+            <li>There are 3 ways to construct array in JavaScript</li>
+            <ol type="1">
+                <li>By array literal</li>
+                <li>By creating instance of Array directly (using new keyword)</li>
+                <li>By using an Array constructor (using new keyword)</li>
+                <ul type="none">
+                    <li><b> JavaScript array literal</b></li>
+                    <li>The syntax of creating array using array literal is given below:</li>
+                    <li>var arrayname=[value1,value2.....valueN];  </li>
+                    <li>As you can see, values are contained inside [ ] and separated by , (comma).</li>
+                    <li>Let's see the simple example of creating and using array in JavaScript.</li>
+                    
+                </ul>
+        </ul>
+        </div>
+
+        <div class="content" id="#comment">
+          <h2><b># JavaScript Comment #</b> </h2>
+          <ul type="none">
+              <li>:-JavaScript comments can be used to explain JavaScript code, and to make it more readable.</li>
+              <li>JavaScript comments can also be used to prevent execution, when testing alternative code.</li>
+          </ul>
+          <li><b>Single Line Comments</b></li>
+          <li>:- Single line comments start with //.</li>
+          <li>Any text between // and the end of the line will be ignored by JavaScript (will not be executed).</li>
+          <ul type="disc">
+              <li><b>Example</b></li>
+          </ul>
+          <!-- <li>// Change heading: <br> -->
+              document.getElementById("myH").innerHTML = "My First Page"; <br>
+              
+              // Change paragraph: <br>
+              document.getElementById("myP").innerHTML = "My first paragraph.";</li>
+              <li><b>Multi-line Comments</b></li>
+              <ul type="none">
+                  <li>Multi-line comments start with /* and end with */.</li>
+                  <li>Any text between /* and */ will be ignored by JavaScript.</li>
+                  <li><b>:- This example uses a multi-line comment (a comment block) to explain the code:</b></li>
+              </ul>
+              <li><b>Example</b>:-</li>
+              <ul type="none">
+              <li>/* <br>
+                  The code below will change <br>
+                  the heading with id = "myH" <br>
+                  and the paragraph with id = "myP" <br>
+                  in my web page: <br>
+                  */ <br>
+                  document.getElementById("myH").innerHTML = "My First Page"; <br>
+                  document.getElementById("myP").innerHTML = "My first paragraph.";</li>
+                  
+                  </ul>
+                  </div>
+
+                  <div class="content" style="margin-top: 300px;">
+                    <h3><b># Function</b> #</h3>
+                    <ul type="disc">
+                        <li>Function is block of code,used for some specific task.</li>
+                        <li>It can we acess from multiple times.</li>
+                        <li>used for Reusability.</li>
+                        <li>A JavaScript function is executed when "something" invokes it (calls it).</li>
+                    </ul>
+                    <ul type="none">
+                        <li><b>Example</b></li>
+                        <li>// Function to compute the product of p1 and p2 <br>
+                            function myFunction(p1, p2) { <br>
+                              return p1 * p2; <br>
+                            }</li> 
+                            <li><b>JavaScript Function Syntax</b></li>
+                            <ul type="disc">
+                            <li>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</li>
+                            <li>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</li>
+                            <li>The parentheses may include parameter names separated by commas:
+                                (parameter1, parameter2, ...)</li>
+                                <li>The code to be executed, by the function, is placed inside curly brackets: {}</li>
+                                <li><b>Function</b> - name(parameter1, parameter2, parameter3) { 
+                                    // code to be executed br
+                                  }</li>
+                                <li>function-<b>parameters</b> are listed inside the parentheses () in the function definition. </li>
+                                <li>Function - <b>arguments</b> are the values received by the function when it is invoked.</li>
+                                <li>Inside the function, the arguments (the parameters) behave as local variables.</li>
+                                
+                                </ul>
+                    </ul>
+                    <ul type="none">
+                        <li><b># Function Return</b></li>
+                        <li>When JavaScript reaches a return statement, the function will stop executing.</li>
+                        <li>If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.</li>
+                        <li>Functions often compute a return value. The return value is "returned" back to the "caller":</li>
+                        <li><b>Example</b>:-</li>
+                        <li><b>Calculate the product of two numbers, and return the result</b>:</li>
+                        <li>// Function is called, the return value will end up in x <br>
+                            let x = myFunction(4, 3); <br>
+                            
+                            function myFunction(a, b) { <br>
+                            // Function returns the product of a and b br
+                              return a * b; <br>
+                            }</li>
+                            <li><b># Why Function?</b></li>
+                            <ul type=disc>
+                                <li>With functions you can reuse code</li>
+                                <li>You can write code that can be used many times.</li>
+                                <li>You can use the same code with different arguments, to produce different results.</li>
+                                
+                            </ul>
+                            <ul type="none">
+                                <li><b># The () Operator</b></li>
+                                <li>The () operator invokes (calls) the function:</li>
+                                <li><b>Example</b>:-</li>
+                                <li>function toCelsius(fahrenheit) { <br>
+                                    return (5/9) * (fahrenheit-32); <br>
+                                  } <br>
+                                  
+                                  let value = toCelsius(77);</li>
+                            </ul>
+                    </ul>
+                    </div>
+
+      </section>
+      </main>
+
+  <section class="toggle_sec">
+    <div class="container_toggle">
+      <button id="topicButton">Topics</button>
+      <div class="topic-content">
+        <h2><a href="#intro">History</a></h2>
+        <h2><a href="#doctype">Introduction</a></h2>
+        <h2><a href="#tag">JRE</a></h2>
+        <h2><a href="#attribute">Token</a></h2>
+        <h2><a href="#comment">Comment</a></h2>
+        <h2><a href="">Var Let Const</a></h2>
+        <h2><a href="#array">Array</a></h2>
+        <h2><a href="">Object</a></h2>
+        <h2><a href="">Closure</a></h2>
+        <h2><a href="">Call apply Bind</a></h2>
+        <h2><a href="">DOM</a></h2>
+    
+        
+      </div>
+      <div class="topic-content">
+        <!-- <h2>Topic 2</h2> -->
+        <p>This is the content for topic 2.</p>
+      </div>
+      
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html> 

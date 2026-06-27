@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Complete Learning Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            padding: 40px 15px;
+        }
+
+        .container{
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card{
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h1{
+            font-size: 34px;
+            color: #009688;
+            margin-bottom: 15px;
+        }
+
+        h2{
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3{
+            font-size: 18px;
+            color: #555;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        p{
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        ul, ol{
+            list-style-position: inside;
+            margin-top: 10px;
+        }
+
+        li{
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        code{
+            background: #f1f1f1;
+            padding: 4px 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #d32f2f;
+        }
+
+        .highlight{
+            background: #e0f2f1;
+            padding: 15px;
+            border-left: 5px solid #009688;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h1>SQL – Complete Learning Notes</h1>
+        <p>
+            These SQL notes are prepared for beginners, students,
+            and aspiring backend developers. They are useful for
+            learning platforms, college exams, and interview preparation.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>1. Introduction to SQL</h2>
+        <p>
+            SQL stands for <strong>Structured Query Language</strong>.
+            It is used to communicate with relational databases.
+            SQL helps users create, read, update, and delete data.
+        </p>
+        <div class="highlight">
+            SQL is not a programming language, it is a database query language.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. What is a Database?</h2>
+        <p>
+            A database is an organized collection of data stored
+            electronically. Databases store information in tables
+            consisting of rows and columns.
+        </p>
+
+        <ul>
+            <li>Row = Record</li>
+            <li>Column = Field</li>
+            <li>Table = Collection of records</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>3. Why Use SQL?</h2>
+        <ul>
+            <li>Stores large amounts of data</li>
+            <li>Fast data retrieval</li>
+            <li>Secure data handling</li>
+            <li>Used in almost every application</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>4. Popular Databases Using SQL</h2>
+        <ul>
+            <li>MySQL</li>
+            <li>Oracle</li>
+            <li>PostgreSQL</li>
+            <li>SQL Server</li>
+            <li>SQLite</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>5. SQL Data Types</h2>
+        <ul>
+            <li><strong>INT</strong> – Integer numbers</li>
+            <li><strong>VARCHAR</strong> – Text values</li>
+            <li><strong>DATE</strong> – Date values</li>
+            <li><strong>FLOAT</strong> – Decimal numbers</li>
+            <li><strong>BOOLEAN</strong> – True/False</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>6. SQL Commands Categories</h2>
+        <ul>
+            <li><strong>DDL</strong> – CREATE, ALTER, DROP</li>
+            <li><strong>DML</strong> – INSERT, UPDATE, DELETE</li>
+            <li><strong>DQL</strong> – SELECT</li>
+            <li><strong>DCL</strong> – GRANT, REVOKE</li>
+            <li><strong>TCL</strong> – COMMIT, ROLLBACK</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>7. Creating a Database</h2>
+        <p>Example:</p>
+        <p><code>CREATE DATABASE college;</code></p>
+        <p><code>USE college;</code></p>
+    </div>
+
+    <div class="card">
+        <h2>8. Creating a Table</h2>
+        <p>Example:</p>
+        <p>
+            <code>
+                CREATE TABLE student ( <br>
+                id INT, <br>
+                name VARCHAR(50), <br>
+                age INT <br>
+                );
+            </code>
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>9. Insert Data</h2>
+        <p>
+            <code>
+                INSERT INTO student VALUES (1, 'Amit', 21);
+            </code>
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>10. SELECT Query</h2>
+        <p>
+            The SELECT statement is used to fetch data from tables.
+        </p>
+        <p><code>SELECT * FROM student;</code></p>
+    </div>
+
+    <div class="card">
+        <h2>11. WHERE Clause</h2>
+        <p>
+            Used to filter records based on conditions.
+        </p>
+        <p><code>SELECT * FROM student WHERE age &gt; 20;</code></p>
+    </div>
+
+    <div class="card">
+        <h2>12. UPDATE & DELETE</h2>
+        <p><code>UPDATE student SET age=22 WHERE id=1;</code></p>
+        <p><code>DELETE FROM student WHERE id=1;</code></p>
+    </div>
+
+    <div class="card">
+        <h2>13. Advantages of SQL</h2>
+        <ul>
+            <li>Easy to learn</li>
+            <li>High performance</li>
+            <li>Industry standard</li>
+            <li>Works with many databases</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>14. Conclusion</h2>
+        <p>
+            SQL is a must-learn skill for backend developers,
+            data analysts, and full-stack developers.
+            Mastering SQL improves database handling and job opportunities.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

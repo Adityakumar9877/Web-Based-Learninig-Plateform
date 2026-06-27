@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+        *{
+            width: 1000px;
+            
+        }
+        body{
+            font-family: 'Ysabeau', sans-serif;
+        }
+        .container {
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-flow:column wrap;
+            gap: 20px;
+            
+        
+           
+        }
+
+        .container div {
+            text-align: justify;
+            padding: 1px 20px;
+            border: 0.5px solid rgba(255, 0, 0, 0.59);
+           border-top: none;
+           border-radius: 30px;
+           
+        }
+
+        div>h3 {
+            color: red;
+            text-shadow: 1px 1px 10px white;
+        }
+
+        div p {
+            color: black;
+            text-shadow: 1px 1px 10px white;
+        }
+
+        .main {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <p class="main">Dear readers, these HTML5 Interview Questions have been designed specially to get you acquainted
+            with the
+            nature of questions you may encounter during your interview for the subject of HTML5. As per my experience
+            good interviewers hardly plan to ask any particular question during your interview, normally questions start
+            with some basic concept of the subject and later they continue based on further discussion and what you
+            answer:</p>
+        <div>
+            <h3>JavaScript</h3>
+            <p>created by Brendan Eich in 1995, is one of the most widely used web development languages. It was designed to build dynamic web pages at first. A script is a JS program that may be added to the HTML of any web page. When the page loads, these scripts execute automatically.</p>
+        </div>
+        <div>
+            <h3>hoisting</h3>
+            <p>Hoisting is the default behaviour of javascript where all the variable and function declarations are moved on top..</p>
+        </div>
+        <div>
+            <h3> Is javascript a statically typed or a dynamically typed language?</h3>
+            <p>JavaScript is a dynamically typed language. In a dynamically typed language, the type of a variable is checked during run-time in contrast to a statically typed language, where the type of a variable is checked during compile-time.</p>
+            <p>Since javascript is a loosely(dynamically) typed language, variables in JS are not associated with any type. A variable can hold the value of any data type.</p>
+        </div>
+        <div>
+            <h3>Explain passed by value and passed by reference.</h3>
+            <p>n JavaScript, primitive data types are passed by value and non-primitive data types are passed by reference.</p>
+            <p>For understanding passed by value and passed by reference, we need to understand what happens when we create a variable and assign a value to it,
+
+                var x = 2;</p>
+        </div>
+        <div>
+            <h3>What do you mean by strict mode in javascript and characteristics of javascript strict-mode?</h3>
+            <p>In ECMAScript 5, a new feature called JavaScript Strict Mode allows you to write a code or a function in a "strict" operational environment. In most cases, this language is 'not particularly severe' when it comes to throwing errors. In 'Strict mode,' however, all forms of errors, including silent errors, will be thrown. As a result, debugging becomes a lot simpler.  Thus programmer's chances of making an error are lowered.</p>
+        </div>
+        <div>
+            <h3>Explain “this” keyword.</h3>
+            <p>The “this” keyword refers to the object that the function is a property of.
+
+                The value of the “this” keyword will always depend on the object that is invoking the function.\</p>
+                <p>function doSomething() {
+                    console.log(this);
+                  }
+                     
+                  doSomething();</p>
+           
+        </div>
+        <div>
+            <h3>What do you mean by Self Invoking Functions?</h3>
+            <p>Without being requested, a self-invoking expression is automatically invoked (initiated). If a function expression is followed by (), it will execute automatically. A function declaration cannot be invoked by itself.</p>
+            <p>Normally, we declare a function and call it, however, anonymous functions may be used to run a function automatically when it is described and will not be called again. And there is no name for these kinds of functions</p>
+        </div>
+        <div>
+            <h3>Explain Scope and Scope Chain in javascript.</h3>
+            <p>Scope in JS determines the accessibility of variables and functions at various parts of one’s code.</p>
+            <p>There are three types of scopes in JS:
+
+                Global Scope,
+                Local or Function Scope,
+                Block Scope</p>
+            
+        </div>
+        <div>
+            <h3>What are callbacks?</h3>
+            <p>A callback is a function that will be executed after another function gets executed. In javascript, functions are treated as first-class citizens, they can be used as an argument of another function, can be returned by another function, and can be used as a property of an object.</p>
+        </div>
+        <div>
+            <h3>What are the types of errors in javascript?</h3>
+            <p>TThere are two types of errors in javascript..</p>
+            <p><b>1. Syntax error</b>: Syntax errors are mistakes or spelling problems in the code that cause the program to not execute at all or to stop running halfway through. Error messages are usually supplied as well.
+                <b>2.Logical error</b>: Reasoning mistakes occur when the syntax is proper but the logic or program is incorrect. The application executes without problems in this case. However, the output findings are inaccurate. These are sometimes more difficult to correct than syntax issues since these applications do not display error signals for logic faults</p>
+            
+        </div>
+        <div>
+            <h3>What is recursion in a programming language?</h3>
+            <p>Recursion is a technique to iterate over an operation by having a function call itself repeatedly until it arrives at a result.</p>
+            <p>function add(number) { <br>
+                if (number <= 0) { 
+                  return 0; 
+                } else {
+                  return number + add(number - 1);  
+                }
+              }
+              add(3) => 3 + add(2) 
+                        3 + 2 + add(1)
+                        3 + 2 + 1 + add(0)
+                        3 + 2 + 1 + 0 = 6  
+
+            </p>
+        </div>
+        <div>
+            <h3> What is the use of a constructor function in javascript?</h3>
+            <p> Constructor functions are used to create objects in javascript. </p>
+            <p>If we want to create multiple objects having similar properties and methods, constructor functions are used.</p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

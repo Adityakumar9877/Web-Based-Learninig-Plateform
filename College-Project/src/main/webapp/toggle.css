@@ -1,0 +1,69 @@
+.toggle_sec{
+  position: absolute;
+ width: 100%;
+ height: 20px;
+ 
+  
+}
+
+
+.container_toggle {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+   position: fixed;
+   top: 70px;
+   left: -10;
+   text-align: center;
+    background-attachment: fixed;
+    
+    
+  
+   
+  }
+  
+  #topicButton {
+    width: 120px; /* Adjust as needed */
+    background-color: orange;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 30px;
+  }
+  #topicButton:hover{
+background-color: yellow;
+color: red;
+font-weight: 200;
+border-radius: 30px;
+  }
+
+  
+  .topic-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  .topic-content.show {
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Adjust the styles for smaller screens */
+    .container {
+      max-width: 400px;
+    }
+  
+    #topicButton {
+      width: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Adjust the styles for even smaller screens */
+    .container {
+      max-width: 300px;
+    }
+  
+    #topicButton {
+      width: 80px;
+    }
+  }

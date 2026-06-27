@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tutorial</title>
+  <link rel="stylesheet" href="html.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="toggle.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <nav>
+        <div class="logo">
+          <a href="#">Tech<span>Yantra</span></a>
+        </div>
+        <input style="visibility: hidden;" type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <!-- <label for="menu-toggle" class="menu-icon">&#9776</label> -->
+          <li><a href="dashboard.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Tutorials</a>
+            <ul>
+              <li><a href="html.html">Web Development</a> </li>
+              <li><a href="java.html">Programming Languages</a></li>
+              <li><a href="sql.html">Databases</a></li>
+            </ul>
+          </li>
+          <li><a href="interview/interview.html">Interview Questions</a></li>
+          <li><a href="code_editor/code_editor.html">Code Editor</a></li>
+          <li><a href="#">Tools</a></li>
+          <li style="visibility: hidden;"><a href="#">Forum</a></li>
+        </ul>
+      </nav>
+
+  </header>
+
+  <main>
+    <section class="main">
+
+      <div class="content" id="intro">
+        <h1>INTRODUCTION</h1>
+        <ol type="1">
+          <li>HTML developed by Tim Berners-Lee in 1991.</li>
+          <li>It is product of SGML (standard Generalised Markup Language.)</li>
+          <li>HTML is a markup language that tells web browser how to structure the web pages you visit.</li>
+          <li>Without HTML , A browser would not know how to display thing, It provide a basic structure of the page.
+          </li>
+          <li>HTML document should be saved with .html extension.</li>
+          <li>The current version of html is HTML5 (2014).</li>
+        </ol>
+      </div>
+
+      <div class="content" id="doctype">
+        <h2>#DOCTYPE</h2>
+        <ol>
+          <li>It is document type declaration .</li>
+          <li> &#60;!DOCTYPE> is a declaration in HTML that specifies the version of HTML used in a web pages.</li>
+          <li><b>it is not an HTML tag.</b></li>
+          <li>The DOCTYPE declaration must be the very first line of an HTML document , before the &#60;html/&#62; tag
+          </li>
+          <li>It is important to include the correct &#60;DOCTYPE&#62; declaration in an HTML document , as it can
+            affect how the document is rendered in different web browsers.</li>
+          <li>The HTMl5 document declaration is &#60;DOCTYPE html&#62; </li>
+          <li>In the case of HTML% , the doctype declaration is very simple and concise , and it replace the longer ,
+            more complex doctype declaration that were used in previous version of HTML. </li>
+
+        </ol>
+      </div>
+
+      <div class="content" id="element">
+        <h3>What are HTML elements?</h3>
+        <p>In HTML, an element is a section of an HTML document. Some HTML elements represent visible components on a
+          web page, such as text, images, or buttons, while others denote different sections of the page or provide
+          meta-information about the document.</p><br>
+        <img src="../images/html-elements.webp" alt="element" style="width: 100%; height: 400px;"><br>
+        <h3>Empty HTML Elements</h3>
+        <p>While most HTML elements are written with an opening and closing tag, some elements consist of a single tag
+          and do not have closing tags or content. These are called empty elements.
+
+          One empty element you’ll see often is the line break element, which adds a line break between text. The line
+          break element is made with the empty <br> tag</p>
+        <h3>HTML Attributes</h3>
+        <p>HTML elements can also contain attributes. Attributes are extra code placed inside the opening tag of an
+          element that provides additional information about the element. An attribute may be optional or required.</p>
+        <h3>HTML Element Nesting</h3>
+        <p>HTML elements can also be placed inside of other elements — this is called nesting and is key to how HTML
+          documents are assembled.</p>
+        <p>Going back to our
+        <p> example, let’s see how an anchor element, which creates a hyperlink, is nested inside paragraph text. Here,
+          the anchor element is placed between the opening and closing tags of the paragraph element.</p>
+      </div>
+
+      <div class="content" id="tag" style="margin-top: 750px;">
+        <h3>HTML TAG</h3>
+        <P>HTML tags are like keywords which defines that how web browser will format and display the content. With the
+          help of tags, a web browser can distinguish between an HTML content and a simple content. HTML tags contain
+          three main parts: opening tag, content and closing tag. But some HTML tags are unclosed tags.</P>
+        <p>When a web browser reads an HTML document, browser reads it from top to bottom and left to right. HTML tags
+          are used to create HTML documents and render their properties. Each HTML tags have different properties.</p>
+        <br>
+        <p>An HTML file must have some essential tags so that web browser can differentiate between a simple text and
+          HTML text. You can use as many tags you want as per your code requirement.</p>
+        <ul>
+          <li>All HTML tags must enclosed within &#60; &#62; these brackets.</li>
+          <li>Every tag in HTML perform different tasks.</li>
+          <li>If you have used an open tag &#60; tag &#62; then you must use a close tag </tag> (except some tags)</li>
+        </ul>
+      </div>
+
+      <div class="content" id="attribute">
+        <h2><b>Attribute</b></h2>
+        <ul type="none">
+          <li>We have seen few HTML tags and their usage like heading tags &#60;h1&#62;, &#60;h2&#62;, paragraph tag
+            &#60;p&#62; and other tags. We used them so far in their simplest form, but most of the HTML tags can
+            also have attributes, which are extra bits of information.</li>
+          <li>An attribute is used to define the characteristics of an HTML element and is placed inside the element's
+            opening tag. All attributes are made up of two parts − a name and a value</li>
+          <ul type="disc">
+            <li>The name is the property you want to set. For example, the paragraph &#60;p&#62; element in the
+              example carries an attribute whose name is align, which you can use to indicate the alignment of
+              paragraph on the page.</li>
+            <li>The value is what you want the value of the property to be set and always put within quotations. The
+              below example shows three possible values of align attribute: left, center and right.</li>
+            <ul type="none">
+              <li>Attribute names and attribute values are case-insensitive. However, the World Wide Web
+                Consortium (W3C) recommends lowercase attributes/attribute values in their HTML 4
+                recommendation.</li>
+              <li>
+                <h2>Example</h2>
+              </li>
+              <li>&#60;!DOCTYPE html&#62; <br>
+                &#60;html&#62; <br>
+
+                &#60;head&#62; <br>
+                &#60;title&#62;Align Attribute Example&#60;/title&#62; <br>
+                &#60;/head&#62; <br>
+
+                &#60;body&#62; <br>
+                &#60;p align = "left">This is left aligned&#60;/p&#62; <br>
+                &#60;p align = "center">This is center aligned&#60;/p&#62; <br>
+                &#60;p align = "right">This is right aligned&#60;/p&#62; <br>
+                &#60;/body&#62; <br>
+
+                &#60;/html&#62;</li>
+            </ul>
+          </ul>
+        </ul>
+      </div>
+
+
+      <div class="content" id="comment">
+        <h2><b>Comment</b></h2>
+        <li>The comment tag is used to insert comments in the source code. Comments are not displayed in the browsers.
+        </li>
+        <li>You can use comments to explain your code, which can help you when you edit the source code at a later date.
+          This is especially useful if you have a lot of code.</li>
+        <ul type="none">
+          <li>
+            <h2>Note</h2>
+          </li>
+          <li>The two forward slashes at the end of comment line (//) is the JavaScript comment symbol. This prevents
+            JavaScript from executing the --> tag.</li>
+          <li>
+            <h2>Standard Attributes</h2>
+          </li>
+          <li>The comment tag does not support any standard attributes.</li>
+          <li>
+            <h2>Event Attributes</h2>
+          </li>
+          <li>The comment tag does not support any event attributes.</li>
+
+        </ul>
+      </div>
+
+
+      <div class="content" id="text-formatting">
+  <h2><b>Text Formatting Tags</b></h2>
+
+  <li>HTML text formatting tags are used to format and style text content on a web page.</li>
+  <li>These tags help make text bold, italic, underlined, highlighted, or styled for better readability.</li>
+
+  <ul type="none">
+    <li>
+      <h2>Common Formatting Tags</h2>
+    </li>
+
+    <li><b>&lt;b&gt;</b> – Defines bold text.</li>
+    <li><b>&lt;strong&gt;</b> – Defines important text (semantic bold).</li>
+    <li><b>&lt;i&gt;</b> – Defines italic text.</li>
+    <li><b>&lt;em&gt;</b> – Emphasized text (semantic italic).</li>
+    <li><b>&lt;u&gt;</b> – Underlined text.</li>
+    <li><b>&lt;mark&gt;</b> – Highlighted text.</li>
+    <li><b>&lt;small&gt;</b> – Smaller text.</li>
+    <li><b>&lt;del&gt;</b> – Deleted text (strike-through).</li>
+    <li><b>&lt;ins&gt;</b> – Inserted text.</li>
+    <li><b>&lt;sub&gt;</b> – Subscript text.</li>
+    <li><b>&lt;sup&gt;</b> – Superscript text.</li>
+
+    <li>
+      <h2>Note</h2>
+    </li>
+    <li>Use semantic tags like <b>&lt;strong&gt;</b> and <b>&lt;em&gt;</b> instead of only visual tags.</li>
+
+    <li>
+      <h2>Standard Attributes</h2>
+    </li>
+    <li>Text formatting tags support global attributes like <b>class</b>, <b>id</b>, and <b>style</b>.</li>
+
+    <li>
+      <h2>Event Attributes</h2>
+    </li>
+    <li>Text formatting tags can support event attributes like <b>onclick</b>, <b>onmouseover</b>, etc.</li>
+  </ul>
+</div>
+
+<div class="content" id="heading">
+  <h2><b>Heading Tags</b></h2>
+
+  <li>HTML heading tags are used to define headings and subheadings on a web page.</li>
+  <li>They help structure the content and improve readability as well as SEO.</li>
+
+  <ul type="none">
+    <li>
+      <h2>Heading Levels</h2>
+    </li>
+
+    <li><b>&lt;h1&gt;</b> – Defines the most important heading.</li>
+    <li><b>&lt;h2&gt;</b> – Defines the second level heading.</li>
+    <li><b>&lt;h3&gt;</b> – Defines the third level heading.</li>
+    <li><b>&lt;h4&gt;</b> – Defines the fourth level heading.</li>
+    <li><b>&lt;h5&gt;</b> – Defines the fifth level heading.</li>
+    <li><b>&lt;h6&gt;</b> – Defines the least important heading.</li>
+
+    <li>
+      <h2>Note</h2>
+    </li>
+    <li>Each page should ideally contain only one <b>&lt;h1&gt;</b> tag.</li>
+    <li>Heading tags should be used in proper order for better SEO.</li>
+
+    <li>
+      <h2>Standard Attributes</h2>
+    </li>
+    <li>Heading tags support global attributes like <b>class</b>, <b>id</b>, and <b>style</b>.</li>
+
+    <li>
+      <h2>Event Attributes</h2>
+    </li>
+    <li>Heading tags can support event attributes such as <b>onclick</b>, <b>onmouseover</b>, etc.</li>
+  </ul>
+</div>
+
+
+
+<div class="content" id="paragraph">
+  <h2><b>Paragraph Tag</b></h2>
+
+  <li>The paragraph tag is used to define a block of text in HTML.</li>
+  <li>It automatically adds space before and after the text for better readability.</li>
+
+  <ul type="none">
+    <li>
+      <h2>Paragraph Syntax</h2>
+    </li>
+
+    <li><b>&lt;p&gt;</b> – Defines a paragraph of text.</li>
+
+    <li>
+      <h2>Note</h2>
+    </li>
+    <li>The paragraph tag always starts on a new line.</li>
+    <li>Extra spaces and line breaks inside the paragraph are ignored by the browser.</li>
+
+    <li>
+      <h2>Standard Attributes</h2>
+    </li>
+    <li>The paragraph tag supports global attributes like <b>class</b>, <b>id</b>, and <b>style</b>.</li>
+
+    <li>
+      <h2>Event Attributes</h2>
+    </li>
+    <li>The paragraph tag supports event attributes such as <b>onclick</b>, <b>onmouseover</b>, etc.</li>
+  </ul>
+</div>
+
+
+
+
+  </main>
+
+  <section class="toggle_sec">
+    <div class="container_toggle">
+      <button id="topicButton">Topics</button>
+      <div class="topic-content">
+        <h2><a href="#intro">INTRODUCTION</a></h2>
+        <h2><a href="#doctype">DOCTYPE</a></h2>
+        <h2><a href="#tag">Tag</a></h2>
+        <h2><a href="#attribute">Attributes</a></h2>
+        <h2><a href="#comment">Comment</a></h2>
+        <h2><a href="#text-formatting">Text Formatting Tags</a></h2>
+        <h2><a href="#heading">Heading Tags</a></h2>
+        <h2><a href="#paragraph">Paragraph Tag</a></h2>
+        <h2><a href="">Images</a></h2>
+        <h2><a href="">hyperlink</a></h2>
+        <h2><a href="">List</a></h2>
+
+
+      </div>
+      <div class="topic-content">
+        <!-- <h2>Topic 2</h2> -->
+        <p>This is the content for topic 2.</p>
+      </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+<div class="content">
+  <h2><b>Comment</b></h2>
+  <li>The comment tag is used to insert comments in the source code. Comments are not displayed in the browsers.</li>
+  <li>You can use comments to explain your code, which can help you when you edit the source code at a later date. This
+    is especially useful if you have a lot of code.</li>
+  <ul type="none">
+    <li>
+      <h2>Note</h2>
+    </li>
+    <li>The two forward slashes at the end of comment line (//) is the JavaScript comment symbol. This prevents
+      JavaScript from executing the --> tag.</li>
+    <li>
+      <h2>Standard Attributes</h2>
+    </li>
+    <li>The comment tag does not support any standard attributes.</li>
+    <li>
+      <h2>Event Attributes</h2>
+    </li>
+    <li>The comment tag does not support any event attributes.</li>
+
+  </ul>
+</div>

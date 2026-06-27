@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Interview Questions</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+
+body {
+    font-family: 'Ysabeau', sans-serif;
+    background: #f7f7f7;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container div {
+    background: #fff;
+    text-align: justify;
+    padding: 15px 25px;
+    border: 1px solid rgba(0, 0, 255, 0.59);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+div>h3 {
+    color: blue;
+    text-shadow: 1px 1px 5px white;
+    margin-bottom: 10px;
+}
+
+div p {
+    color: black;
+    text-shadow: 1px 1px 5px white;
+    margin-top: 10px;
+}
+
+.container div:hover {
+    background: #e6f0ff;
+    box-shadow: 5px 5px 20px rgba(0,0,255,0.3);
+    transform: translateY(-5px);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div>
+  <h3>What is CSS?</h3>
+  <p>CSS (Cascading Style Sheets) is used to style and layout HTML elements on a web page.</p>
+</div>
+
+<div>
+  <h3>What are the different types of CSS?</h3>
+  <p>Inline CSS, Internal CSS (inside &lt;style&gt;), and External CSS (linked via &lt;link&gt;).</p>
+</div>
+
+<div>
+  <h3>What is the difference between relative, absolute, fixed, and sticky positioning?</h3>
+  <p>CSS positioning defines how elements are placed. Relative moves relative to its normal position, absolute moves relative to nearest positioned ancestor, fixed stays relative to viewport, and sticky toggles between relative and fixed.</p>
+</div>
+
+<div>
+  <h3>What is the difference between id and class in CSS?</h3>
+  <p>An id is unique and used once per page (#id), while a class can be used multiple times (.class).</p>
+</div>
+
+<div>
+  <h3>What are pseudo-classes?</h3>
+  <p>Pseudo-classes define the state of an element, such as :hover, :focus, :first-child, :nth-child(n).</p>
+</div>
+
+<div>
+  <h3>What are pseudo-elements?</h3>
+  <p>Pseudo-elements style specific parts of an element, like ::before, ::after, ::first-letter, ::first-line.</p>
+</div>
+
+<div>
+  <h3>What is the difference between relative units (em, rem, %) and absolute units (px, cm)?</h3>
+  <p>Relative units adjust based on parent or root element, while absolute units are fixed size regardless of parent.</p>
+</div>
+
+<div>
+  <h3>What is the difference between inline, inline-block, and block elements?</h3>
+  <p>Block elements take full width and start on a new line, inline elements stay in line, inline-block behaves like inline but allows width/height.</p>
+</div>
+
+<div>
+  <h3>What is the difference between visibility: hidden and display: none?</h3>
+  <p>visibility: hidden hides the element but keeps space, display: none removes the element and space.</p>
+</div>
+
+<div>
+  <h3>What is the difference between relative, absolute, and fixed background positioning?</h3>
+  <p>background-position determines the starting point of the background image relative to the element, page, or viewport depending on CSS property values.</p>
+</div>
+
+<div>
+  <h3>What is the difference between inline styles, internal CSS, and external CSS?</h3>
+  <p>Inline styles apply directly to an element, internal CSS is inside &lt;style&gt; in the page head, external CSS is in a separate file linked via &lt;link&gt;.</p>
+</div>
+
+<div>
+  <h3>What is the difference between relative and absolute URLs in CSS?</h3>
+  <p>Relative URLs point to resources relative to the CSS file location, absolute URLs include the full path including domain.</p>
+</div>
+
+<div>
+  <h3>What are media queries?</h3>
+  <p>Media queries allow CSS to be applied conditionally based on screen size, resolution, or device type for responsive design.</p>
+</div>
+
+<div>
+  <h3>What is the difference between inline, internal, and external CSS specificity?</h3>
+  <p>Inline styles have highest specificity, then internal styles, and external styles have lowest unless overridden.</p>
+</div>
+
+<div>
+  <h3>What is the difference between relative, absolute, fixed, and sticky positioning?</h3>
+  <p>Relative is relative to original position, absolute relative to nearest positioned ancestor, fixed relative to viewport, sticky switches between relative and fixed based on scroll.</p>
+</div>
+
+<div>
+  <h3>What is the difference between inline-block and block?</h3>
+  <p>Block elements occupy full width and start on a new line, inline-block elements do not start on a new line but can have width and height set.</p>
+</div>
+
+<div>
+  <h3>What are CSS transitions?</h3>
+  <p>CSS transitions define smooth animations for property changes over a duration when state changes, e.g., hover effects.</p>
+</div>
+
+<div>
+  <h3>What are CSS animations?</h3>
+  <p>CSS animations allow multiple keyframe-based animations on an element with control over duration, iteration, and timing functions.</p>
+</div>
+
+<div>
+  <h3>What is the difference between relative, fixed, and sticky position in CSS?</h3>
+  <p>Relative is offset from normal position, fixed stays relative to viewport, sticky switches between relative and fixed when scrolling.</p>
+</div>
+
+<div>
+  <h3>What is the difference between absolute, fixed, and sticky background positioning in CSS?</h3>
+  <p>Absolute positions relative to element, fixed positions relative to viewport, sticky toggles between relative and fixed based on scroll.</p>
+</div>
+
+</div>
+
+</body>
+</html>

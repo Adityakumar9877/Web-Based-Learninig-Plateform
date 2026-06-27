@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tutorial</title>
+  <link rel="stylesheet" href="html.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="toggle.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <nav>
+        <div class="logo">
+          <a href="#">Tech<span>Yantra</span></a>
+        </div>
+        <input style="visibility: hidden;" type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <!-- <label for="menu-toggle" class="menu-icon">&#9776</label> -->
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Tutorials</a>
+            <ul>
+              <li><a href="html.html">Web Development</a> </li>
+              <li><a href="java.html">Programming Languages</a></li>
+              <li><a href="sql.html">Databases</a></li>
+            </ul>
+          </li>
+          <li><a href="interview/interview.html">Interview Questions</a></li>
+          <li><a href="code_editor/code_editor.html">Code Editor</a></li>
+          <li><a href="#">Tools</a></li>
+          <li style="visibility: hidden;"><a href="#">Forum</a></li>
+        </ul>
+      </nav>
+
+  </header>
+
+  <main>
+    <section class="main">
+
+
+      <div class="content" id="intro">
+        <h1>INTRODUCTION</h1>
+        <ol type="1">
+            <li>CSS stands for Cascading Style Sheets .</li>
+            <li>it was developed by Hakon  wium lie in 1994.</li>
+            <li>it was published by worlds wide web consortium(W3C) in 1996.</li>
+            <li>Without HTML , A browser would not know how to display thing, It provide a basic structure of the page.
+            </li>
+            <li>The purpose of using CSS is to separate structure and styling of a pages.</li>
+            <li>The current version of Css is Css4 and it was relesed in Dec 2020.</li>
+        </ol>
+    </div>
+
+ 
+
+    <div class="content" id="selectors">
+      <h3>Selector</h3>
+      <ol type="1">
+
+          <li><b>Introduction</b>
+              <ul>
+                  <li>It is used to target elements, so that we can apply property.</li>
+              </ul>
+          <li><b>Simple Selector</b></li>
+
+          <ul>
+          </ul>
+          <ul>
+              <li><b>Tag Selector</b>:- To target element using tag selector we have to use tagname.</li>
+              <li>syntax:-</li>
+              <!-- <ul type="none"> -->
+              <li>Tagname { property:value;}</li>
+              <!-- <ul type="disc"> -->
+              <li><b>Id selector</b>:-To target element using id selector we have to use hash('#) before the id name.
+              </li>
+              <li><b>Syntax:-</b>#id_name { property:value; }</li>
+              <li><b>Universal Selector</b>:- It is used to target all Html element in webpage.It's symbol is
+                  asterik-(*)</li>
+              <li><b>syntax</b>:- * { property:value; }</li>
+              <li><b>Grouping Selector</b>:-To target multiple elements we can use grouping selector and to group
+                  selector, simply separate each selector with a comma(,)</li>
+              <li><b>syntax</b>:- Selector,Selector2 { property:value; }</li>
+              <ul type="none">
+                  <li><b>3.Combinator Selector</b></li>
+
+              </ul>
+              <ul type="disc">
+                  <li><b>Descendant Child Selector:-</b>to target all Direct childs and indirect childs we have to use
+                      space after the parent selector</li>
+                  <li><b>syntax</b>:-parent child { property:value; }</li>
+                  <li><b>4.Attriute Selector</b>:-</li>
+                  <li>By Attribute Selector :- we can target elements based on the attribute and their values.</li>
+                  <li><b>5.Pseudo Class Selector</b> :- To target elements on the basis of their state.Pseudo-classes
+                      are written with a colon(:) followed by the name of the pseudo-class.</li>
+                  <li><b>6. Pseudo Element Selector</b> :- To target specific part of an element.They are denoted by a
+                      double colon(::) before the name of the pseudo-element.</li>
+              </ul>
+
+          </ul>
+
+          </ul>
+          </li>
+      </ol>
+  </div>
+
+
+     
+
+
+      <div class="content" id="TypeOfCss" style="margin-top: 300px;">
+        <h3>Type OF css</h3>
+        <ol type="1">
+
+          <li><b>Inline CSS.</b>
+            <ul>
+              <li>The Css code we write inside the opening tag is called as inline CSS.</li>
+              <LI>To write inline Css we use 'style' attribute.</LI>
+            </ul>
+          </li>
+
+          <li><b>Internal.CSS</li></b>
+          <ul>
+            <li>The Css code we write inside the Html ducument is called as Internal Css,</li>
+            <li>Here, we have to write css code inside &#60; style &#62; &#60;/style&#62;tag.</li>
+            <li>Style tag</li>
+            <ul type="none">
+              <li>- It is container tag.
+              </li>
+              <li>- IT is provided ny Html to insert css code in ducument only.</li>
+              <ul type="disc">
+                <li>we have to place the style tag within the head tag.</li>
+                <li>syntax</li>
+                <iframe src="syntax.html">
+
+                </iframe>
+
+              </ul>
+            </ul>
+          </ul>
+          <li><b>External.CSS.</b></li>
+          <ul>
+            <li>The Css we are writing in a separate/diffrent document is called as External Css.</li>
+            <li>To write External Css we have to create a separate document and this document should be saved with .css
+              extension.</li>
+            <li>NOW, to link external Css document with the Html we have to use &#60link&#62 Tag (It is a non container
+              tag).</li>
+            <li>syntax</li>
+            <li>&#60link&#62 tag is used to attach external files to our webpage.</li>
+            <li>we have to use &#60link&#62 tag within the head tag.</li>
+            <li>syntax-</li>
+            <ul type="none">
+              <li> selector{</li>
+              <li>property : value;</li>
+              <li>}</li>
+              <ul type="disc">
+
+
+
+              </ul>
+            </ul>
+          </ul>
+
+        </ol>
+      </div>
+
+      <div class="content" id="comment" style="margin-top: 500px;">
+        <h1>COMMENT</h1>
+        <ol type="1">
+            <li>comment are used to document the source code.</li>
+            <li>Comment are not displayed on the webpsge.</li>
+            <li>Syntax:-/*Comment*/</li>
+            <li>Without HTML , A browser would not know how to display thing, It provide a basic structure of the page.
+            </li>
+            <!-- <li>The purpose of using CSS is to separate structure and styling of a pages.</li>
+            <li>The current version of Css is Css4 and it was relesed in Dec 2020.</li> -->
+        </ol>
+    </div>
+
+  </main>
+
+  <section class="toggle_sec">
+    <div class="container_toggle">
+      <button id="topicButton">Topics</button>
+      <div class="topic-content">
+        <h2><a href="#intro">INTRODUCTION</a></h2>
+        <h2><a href="#TypeOfCss">Type of CSS</a></h2>
+        <h2><a href="#comment">Comment</a></h2>
+        <h2><a href="#selectors">selectors</a></h2>
+       
+
+      </div>
+      <div class="topic-content">
+        <!-- <h2>Topic 2</h2> -->
+        <p>This is the content for topic 2.</p>
+      </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

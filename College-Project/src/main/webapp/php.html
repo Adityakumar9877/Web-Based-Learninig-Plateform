@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Complete Learning Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            padding: 40px 15px;
+        }
+
+        .container{
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card{
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h1{
+            font-size: 34px;
+            color: #6f42c1;
+            margin-bottom: 15px;
+        }
+
+        h2{
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3{
+            font-size: 18px;
+            color: #555;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        p{
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        ul, ol{
+            list-style-position: inside;
+            margin-top: 10px;
+        }
+
+        li{
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        code{
+            background: #f1f1f1;
+            padding: 4px 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #c7254e;
+        }
+
+        .highlight{
+            background: #f3e8ff;
+            padding: 15px;
+            border-left: 5px solid #6f42c1;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h1>PHP – Complete Learning Notes</h1>
+        <p>
+            These PHP notes are designed for beginners, students,
+            and aspiring backend developers. They are suitable for
+            learning platforms, college notes, and interview preparation.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>1. Introduction to PHP</h2>
+        <p>
+            PHP stands for <strong>Hypertext Preprocessor</strong>.
+            It is a popular server-side scripting language used to
+            create dynamic and interactive websites.
+        </p>
+        <div class="highlight">
+            PHP code is executed on the server, not in the browser.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. What is PHP?</h2>
+        <p>
+            PHP is an open-source scripting language mainly used
+            for web development. It can generate dynamic page content,
+            handle forms, manage sessions, and interact with databases.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>3. Why Use PHP?</h2>
+        <ul>
+            <li>Easy to learn and use</li>
+            <li>Works with all major databases</li>
+            <li>Free and open-source</li>
+            <li>Fast performance</li>
+            <li>Large community support</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>4. PHP Applications</h2>
+        <ul>
+            <li>Dynamic websites</li>
+            <li>Login and registration systems</li>
+            <li>Content management systems (WordPress)</li>
+            <li>E-commerce websites</li>
+            <li>REST APIs</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>5. PHP Syntax</h2>
+        <p>
+            PHP scripts start with <code>&lt;?php</code> and end with <code>?&gt;</code>.
+        </p>
+        <div class="highlight">
+            Example: <code>&lt;?php echo "Hello World"; ?&gt;</code>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. Variables in PHP</h2>
+        <p>
+            Variables are used to store data. In PHP, all variables
+            start with a dollar sign <code>$</code>.
+        </p>
+        <ul>
+            <li><code>$name = "John";</code></li>
+            <li><code>$age = 25;</code></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>7. Data Types in PHP</h2>
+        <ul>
+            <li>String</li>
+            <li>Integer</li>
+            <li>Float</li>
+            <li>Boolean</li>
+            <li>Array</li>
+            <li>Object</li>
+            <li>NULL</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>8. Conditional Statements</h2>
+        <ul>
+            <li>if</li>
+            <li>if-else</li>
+            <li>if-elseif-else</li>
+            <li>switch</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>9. Loops in PHP</h2>
+        <ul>
+            <li>for loop</li>
+            <li>while loop</li>
+            <li>do-while loop</li>
+            <li>foreach loop</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>10. Functions in PHP</h2>
+        <p>
+            Functions are blocks of code that perform specific tasks
+            and can be reused multiple times.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>11. PHP & MySQL</h2>
+        <p>
+            PHP is widely used with MySQL to store and retrieve data
+            from databases using SQL queries.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>12. Advantages of PHP</h2>
+        <ul>
+            <li>Easy integration with HTML</li>
+            <li>Supports many databases</li>
+            <li>Cross-platform compatibility</li>
+            <li>Secure and scalable</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>13. Conclusion</h2>
+        <p>
+            PHP is a powerful backend language used by millions of websites.
+            Learning PHP helps developers build dynamic web applications
+            and start a career in backend or full-stack development.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

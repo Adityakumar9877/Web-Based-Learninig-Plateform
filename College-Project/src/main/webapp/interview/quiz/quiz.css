@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color:rgb(245, 245, 245);
+}
+
+h1 {
+    color: blue;
+}
+
+#question {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#options button {
+    margin-bottom: 10px;
+    background-color:oldlace;
+    height: 2.3rem;
+    width: 16rem;
+
+}
+#options button:hover{
+    background-color:green;
+    color: white;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    background-color:orange;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 2rem;
+    width: 15rem;
+}
+
+#submit-btn:hover {
+    background-color: #555;
+}

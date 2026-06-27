@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+        *{
+            width: 1000px;
+            
+        }
+        body{
+            font-family: 'Ysabeau', sans-serif;
+        }
+        .container {
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-flow:column wrap;
+            gap: 20px;
+            
+        
+           
+        }
+
+        .container div {
+            text-align: justify;
+            padding: 1px 20px;
+            border: 0.5px solid rgba(255, 0, 0, 0.59);
+           border-top: none;
+           border-radius: 30px;
+           
+        }
+
+        div>h3 {
+            color: red;
+            text-shadow: 1px 1px 10px white;
+        }
+
+        div p {
+            color: black;
+            text-shadow: 1px 1px 10px white;
+        }
+
+        .main {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <p class="main">Dear readers, these HTML5 Interview Questions have been designed specially to get you acquainted
+            with the
+            nature of questions you may encounter during your interview for the subject of HTML5. As per my experience
+            good interviewers hardly plan to ask any particular question during your interview, normally questions start
+            with some basic concept of the subject and later they continue based on further discussion and what you
+            answer:</p>
+        <div>
+            <h3>what is php?</h3>
+            <p>Hypertext Preprocessor is a widely used open-source server-side scripting language especially suited for creating dynamic websites and mobile APIs.</p>
+            <p>PHP supports many databases like MySQL, Solid, PostgreSQL, Oracle, Sybase, generic ODBC, etc. PHP code is embedded within HTML.</p>
+            <p>It is used to manage dynamic content, session tracking, databases, and also to build an entire e-commerce site.
+                By default, most of the web hosting servers support PHP and thus it contributes to cost-effectiveness.</p>
+        </div>
+        <div>
+            <h3>Scope of PHP</h3>
+            <p>PHP stands as one of the top languages because of its ability to have a large impact on the outcome with very little code. This amount of efficiency has been the requirement for the past few years in the industry.</p>
+        </div>
+        <div>
+            <h3>Is PHP a case-sensitive language?</h3>
+            <p>PHP can be considered as a partial case-sensitive language. The variable names are completely case-sensitive but function names are not. Also, user-defined functions are not case-sensitive but the rest of the language is case-sensitive.</p>
+            <p><b>For example,</b> user-defined functions in PHP can be defined in lowercase but later referred to in uppercase, and it would still function normally</p>
+        </div>
+        <div>
+            <h3>What are the different types of variables present in PHP?</h3>
+            <p>There are 8 primary data types in PHP which are used to construct the variables. They are:.</p>
+            <p><b>Integers:</b> Integers are whole numbers without a floating-point. Ex: 1253. <br>
+                <b>Doubles:</b> Doubles are floating-point numbers. Ex: 7.876 <br>
+                <b>Booleans:</b> It represents two logical states- true or false. <br>
+                <b>NULL: NULL</b> is a special type that only has one value, NULL. When no value is assigned to a variable, it can be assigned with NULL. <br>
+                <b>Arrays: </b>Array is a named and ordered collection of similar type of data. Ex: $colors = array("red", "yellow", "blue"); <br>
+                <b> Strings: </b>Strings are a sequence of characters. Ex: “Hello InterviewBit!” <br>
+                    <b> Resources:</b> Resources are special variables that consist of references to resources external to PHP(such as database connections). <br>
+                        <b> Objects:</b> An instance of classes containing data and functions. Ex: $mango = new Fruit();</p>
+        </div>
+        <div>
+            <h3>What are the rules for naming a PHP variable?</h3>
+            <p>The following two rules are needed to be followed while naming a PHP variable:.</p>
+            <p>A variable must start with a dollar symbol, followed by the variable name. For example: $price=100; where price is a variable name. <br>
+                Variable names must begin with a letter or underscore. <br>
+                A variable name can consist of letters, numbers, or underscores. But you cannot use characters like + , – , % , & etc. <br>
+                A PHP variable name cannot contain spaces. <br>
+                PHP variables are case-sensitive. So $NAME and $name both are treated as different variables</p> <br>
+        </div>
+        <div>
+            <h3>Tell me some of the disadvantages of PHP</h3>
+            <p>->PHP is not suitable for giant content-based web applications. <br>
+               -> Since it is open-source, it is not secure. Because ASCII text files are easily available. <br>
+                ->Change or modification in the core behavior of online applications is not allowed by PHP. <br>
+                ->If we use more features of the PHP framework and tools, it will cause poor performance of online applications. <br>
+               -> PHP features a poor quality of handling errors. PHP lacks debugging tools, which are needed to look for warnings and errors. It has only a few debugging tools in comparison to other programming languages</p> <br>
+        </div>
+        <div>
+            <h3>How can PHP and HTML interact?</h3>
+            <p>PHP scripts have the ability to generate HTML, and it is possible to pass information from HTML to PHP.</p>
+            <p>PHP is a server-side language whereas HTML is a client-side language. So PHP executes on the server-side and gets its results as strings, objects, arrays, and then we use them to display its values in HTML</p>
+        </div>
+        <div>
+            <h3> What is the purpose of @ in PHP?</h3>
+            <p>In PHP, @ is used for suppressing error messages. If any runtime error occurs on the line which consists @ symbol at the beginning, then the error will be handled by PHP.</p>
+        </div>
+        <div>
+            <h3>Explain the main types of errors.</h3>
+            <p>The 3 main types of errors in PHP are:.</p>
+            <p><b>Notices:</b> Notices are non-critical errors that can occur during the execution of the script. These are not visible to users. Example: Accessing an undefined variable. <br>
+                <b>Warnings: </b>These are more critical than notices. Warnings don’t interrupt the script execution. By default, these are visible to the user. Example: include() a file that doesn’t exist. <br>
+                <b>Fatal:</b> This is the most critical error type which, when occurs, immediately terminates the execution of the script. Example: Accessing a property of a non-existent object or require() a non-existent file</p>
+        </div>
+        <div>
+            <h3>How to create API in PHP?</h3>
+            <p>API stands for Application Programming Interface. It defines the functions and variables. Communication between the database via PHP extensions is handled by API..</p>
+            <p>Now, REST API is the web architecture that uses HTTP protocol for exchanging data between two functions that means your application or system. Now, let us have a look at how to create REST API in PHP by considering the example of accessing data from a database using PHP script.</p>
+        </div>
+        <div>
+            <h3>Explain type hinting in PHP</h3>
+            <p>In PHP, type hinting is used to specify the expected data type (arrays, objects, interface, etc.) for an argument in a function declaration. It was introduced in PHP 5..</p>
+            <p>Whenever the function is called, PHP checks if the arguments are of a user-preferred type or not. If the argument is not of the specified type, the run time will display an error and the program will not execute.</p>
+        </div>
+        <div>
+            <h3>What are magic constants in PHP?</h3>
+            <p>PHP magic constants are predefined constants, which change based on their use. They start with a double underscore (__) and end with a double underscore (__).</p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

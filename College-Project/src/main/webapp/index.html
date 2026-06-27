@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Learning Platform</title>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	background: #f4f4f4;
+}
+
+/* NAVBAR */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #203f78;
+	padding: 15px 60px;
+}
+
+.logo {
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 30px;
+}
+
+.nav-links li a {
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	transition: 0.3s;
+}
+
+.nav-links li a:hover {
+	color: #ffd700;
+}
+
+.nav-btn {
+	display: flex;
+	gap: 15px;
+}
+
+.btn {
+	padding: 8px 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.login {
+	background: white;
+	color: #203f78;
+}
+
+.register {
+	background: #ffd700;
+	color: black;
+}
+
+/* HERO SECTION */
+.hero {
+	height: 500px;
+	background-image:
+		url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	color: white;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+	position: relative;
+	max-width: 700px;
+}
+
+.hero h1 {
+	font-size: 45px;
+	margin-bottom: 20px;
+}
+
+.hero p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.hero-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.hero-btn {
+	padding: 12px 25px;
+	border-radius: 25px;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.hero-btn1 {
+	border: 2px solid white;
+	color: white;
+}
+
+.hero-btn1:hover {
+	background: white;
+	color: #203f78;
+}
+
+.hero-btn2 {
+	background: #20c997;
+	color: white;
+}
+
+.hero-btn2:hover {
+	background: #17a589;
+}
+
+/* COURSES SECTION */
+.courses {
+	padding: 60px 80px;
+	background: white;
+	text-align: center;
+}
+
+.courses h2 {
+	font-size: 32px;
+	color: #203f78;
+	margin-bottom: 40px;
+}
+
+.course-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+}
+
+.course-card {
+	background: #f4f4f4;
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.4s;
+}
+
+.course-card h3 {
+	color: #203f78;
+	margin-bottom: 10px;
+}
+
+.course-card p {
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.course-card button {
+	padding: 8px 18px;
+	border: none;
+	background: #203f78;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.course-card:hover {
+	transform: translateY(-10px);
+	background: #203f78;
+	color: white;
+}
+
+.course-card:hover h3 {
+	color: #ffd700;
+}
+
+.course-card:hover button {
+	background: #ffd700;
+	color: black;
+}
+
+/* FOOTER */
+.footer {
+	background: #203f78;
+	color: white;
+	padding: 40px 60px;
+}
+
+.footer-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 30px;
+}
+
+.footer-box h3 {
+	margin-bottom: 15px;
+	color: #ffd700;
+}
+
+.footer-box ul {
+	list-style: none;
+}
+
+.footer-box ul li {
+	margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer-box ul li a:hover {
+	color: #ffd700;
+}
+
+.footer-bottom {
+	text-align: center;
+	margin-top: 25px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	padding-top: 10px;
+}
+
+/* CONTACT SECTION */
+.contact {
+	padding: 60px 80px;
+	background: #f4f4f4;
+	text-align: center;
+}
+
+.contact h2 {
+	color: #203f78;
+	margin-bottom: 30px;
+	font-size: 32px;
+}
+
+.contact-container {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	flex-wrap: wrap;
+}
+
+/* FORM */
+.contact-form {
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	width: 350px;
+}
+
+.contact-form input, .contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.contact-form button {
+	padding: 10px;
+	width: 100%;
+	background: #203f78;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.contact-form button:hover {
+	background: #ffd700;
+	color: black;
+}
+
+/* CONTACT INFO */
+.contact-info {
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: left;
+}
+
+.contact-info h3 {
+	color: #203f78;
+	margin-bottom: 10px;
+}
+
+/* MISSION SECTION */
+.mission {
+	padding: 60px 100px;
+	background: #f9f9f9;
+	text-align: center;
+}
+
+.mission h2 {
+	color: #203f78;
+	margin-bottom: 20px;
+}
+
+.mission p {
+	max-width: 800px;
+	margin: auto;
+	line-height: 1.6;
+}
+
+/* TECHNOLOGY SECTION */
+.tech {
+	padding: 60px 100px;
+	background: white;
+	text-align: center;
+}
+
+.tech h2 {
+	color: #203f78;
+	margin-bottom: 40px;
+}
+
+.tech-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.tech-box {
+	background: #f4f4f4;
+	padding: 15px 25px;
+	border-radius: 20px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.tech-box:hover {
+	background: #203f78;
+	color: white;
+}
+
+/* WHY CHOOSE US */
+.why {
+	padding: 60px 100px;
+	background: #f9f9f9;
+	text-align: center;
+}
+
+.why h2 {
+	color: #203f78;
+	margin-bottom: 40px;
+}
+
+.why-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 30px;
+}
+
+.why-box {
+	background: white;
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.why-box:hover {
+	transform: translateY(-8px);
+	background: #203f78;
+	color: white;
+}
+
+/* ABOUT SECTION */
+.about {
+	padding: 80px 100px;
+	background: #ffffff;
+}
+
+.about-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+	flex-wrap: wrap;
+}
+
+.about-text {
+	flex: 1;
+}
+
+.about-text h2 {
+	color: #203f78;
+	margin-bottom: 20px;
+	font-size: 32px;
+}
+
+.about-text p {
+	line-height: 1.7;
+	margin-bottom: 20px;
+}
+
+.about-features {
+	margin-top: 20px;
+}
+
+.about-features li {
+	margin-bottom: 10px;
+	list-style: square;
+}
+
+.about-image {
+	flex: 1;
+}
+
+.about-image img {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* COURSES SECTION */
+.courses {
+	padding: 80px 100px;
+	background: #f4f4f4;
+	text-align: center;
+}
+
+.courses h2 {
+	color: #203f78;
+	margin-bottom: 40px;
+	font-size: 32px;
+}
+
+.course-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 30px;
+}
+
+.course-card {
+	background: white;
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.course-card h3 {
+	color: #203f78;
+	margin-bottom: 10px;
+}
+
+.course-card p {
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.course-btn {
+	display: inline-block;
+	padding: 8px 15px;
+	background: #203f78;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+.course-card:hover {
+	transform: translateY(-10px);
+	background: #203f78;
+	color: white;
+}
+
+.course-card:hover h3 {
+	color: #ffd700;
+}
+
+.course-card:hover .course-btn {
+	background: #ffd700;
+	color: black;
+}
+</style>
+
+</head>
+
+<body>
+
+	<!-- NAVBAR -->
+
+	<nav class="navbar">
+
+		<div class="logo">Learn-Hub</div>
+
+		<ul class="nav-links">
+			<li><a href="#">Home</a></li>
+			<li><a href="#courses">Courses</a></li>
+			<li><a href="login.html">Tutorials</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+
+		<div class="nav-btn">
+
+			<button class="btn login" onclick="location.href='login.html'">Login</button>
+
+			<button class="btn register" onclick="location.href='reg.html'">Register</button>
+
+		</div>
+	</nav>
+
+	<!-- HERO SECTION -->
+
+	<section class="hero">
+
+		<div class="hero-content">
+
+			<h1>Learn Coding & Web Development</h1>
+
+			<p>Start learning HTML, CSS, JavaScript, Java and SQL with coding
+				practice and quizzes.</p>
+
+			<div class="hero-buttons">
+				<a href="#courses" class="hero-btn hero-btn1">Explore Courses</a> <a
+					href="login.html" class="hero-btn hero-btn2">Start Learning</a>
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- ABOUT SECTION -->
+
+	<section id="about" class="about">
+
+		<div class="about-container">
+
+			<div class="about-text">
+
+				<h2>About LearnHub</h2>
+
+				<p>LearnHub is a modern web based learning platform designed to
+					help students learn programming and web development easily. Our
+					platform provides tutorials, coding practice, quizzes and interview
+					preparation to help learners build strong technical skills.</p>
+
+				<ul class="about-features">
+					<li>Interactive Programming Tutorials</li>
+					<li>Coding Practice Problems</li>
+					<li>Technical Interview Preparation</li>
+					<li>Quizzes to Test Knowledge</li>
+				</ul>
+
+			</div>
+
+			<div class="about-image">
+
+				<img
+					src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+
+	<!-- COURSES SECTION -->
+
+	<section class="courses" id="courses">
+
+		<h2>Explore Our Courses</h2>
+
+		<div class="course-container" id="course-container">
+
+			<div class="course-card">
+				<h3>HTML</h3>
+				<p>Learn how to build the structure of websites.</p>
+				<button>Start Learning</button>
+			</div>
+
+			<div class="course-card">
+				<h3>CSS</h3>
+				<p>Create modern and responsive website designs.</p>
+				<button>Start Learning</button>
+			</div>
+
+			<div class="course-card">
+				<h3>JavaScript</h3>
+				<p>Make websites interactive using JavaScript.</p>
+				<button>Start Learning</button>
+			</div>
+
+			<div class="course-card">
+				<h3>Java</h3>
+				<p>Master Java programming for backend development.</p>
+				<button>Start Learning</button>
+			</div>
+
+			<div class="course-card">
+				<h3>SQL</h3>
+				<p>Learn database queries and management.</p>
+				<button>Start Learning</button>
+			</div>
+
+			<div class="course-card">
+				<h3>Coding Practice</h3>
+				<p>Practice coding problems to improve logic.</p>
+				<button>Practice</button>
+			</div>
+
+			<div class="course-card">
+				<h3>InterView Questions</h3>
+				<p>Practice questions.</p>
+				<button>Practice</button>
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+	<!-- MISSION SECTION -->
+
+	<section class="mission" id="mission">
+
+		<h2>Our Mission</h2>
+
+		<p>Our mission is to make programming and web development learning
+			easy and accessible for everyone. Learn-Hub provides structured
+			tutorials, coding practice, quizzes and interview preparation so that
+			students can build strong technical skills and prepare for real world
+			software development careers.</p>
+
+	</section>
+
+
+	<!-- TECHNOLOGIES SECTION -->
+
+	<section class="tech">
+
+		<h2>Technologies You Will Learn</h2>
+
+		<div class="tech-container">
+
+			<div class="tech-box">HTML</div>
+			<div class="tech-box">CSS</div>
+			<div class="tech-box">JavaScript</div>
+			<div class="tech-box">Java</div>
+			<div class="tech-box">SQL</div>
+			<div class="tech-box">Web Development</div>
+
+		</div>
+
+	</section>
+
+
+	<!-- WHY CHOOSE US -->
+
+	<section class="why">
+
+		<h2>Why Choose Learn-Hub</h2>
+
+		<div class="why-container">
+
+			<div class="why-box">
+				<h3>Beginner Friendly</h3>
+				<p>Our tutorials are designed for beginners with easy
+					explanations.</p>
+			</div>
+
+			<div class="why-box">
+				<h3>Practical Learning</h3>
+				<p>Learn by practicing real coding examples and exercises.</p>
+			</div>
+
+			<div class="why-box">
+				<h3>Career Preparation</h3>
+				<p>Prepare for technical interviews with important questions.</p>
+			</div>
+
+			<div class="why-box">
+				<h3>Interactive Content</h3>
+				<p>Quizzes and coding challenges help reinforce learning.</p>
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+	<!-- CONTACT SECTION -->
+
+	<section class="contact" id="contact">
+
+		<h2>Contact Us</h2>
+
+		<div class="contact-container">
+
+			<div class="contact-form">
+
+				<input type="text" placeholder="Your Name"> <input
+					type="email" placeholder="Your Email">
+
+				<textarea rows="4" placeholder="Your Message"></textarea>
+
+				<button>Send Message</button>
+
+			</div>
+
+			<div class="contact-info">
+
+				<h3>Get In Touch</h3>
+
+				<p>Email: support@Learn-Hub.com</p>
+				<p>Phone: +91=========0</p>
+				<p>Location: India</p>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- FOOTER -->
+
+	<footer class="footer">
+
+		<div class="footer-container">
+
+			<div class="footer-box">
+				<h3>Learn-Hub</h3>
+				<p>Online learning platform for web development.</p>
+			</div>
+
+			<div class="footer-box">
+				<h3>Quick Links</h3>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Courses</a></li>
+					<li><a href="#">Tutorials</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-box">
+				<h3>Technologies</h3>
+				<ul>
+					<li><a href="#">HTML</a></li>
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">JavaScript</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="footer-bottom">
+			<p>© 2026 Learn-Hub | All Rights Reserved</p>
+		</div>
+
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Success</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43);
+}
+
+/* Box */
+.box {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #e6f7f2;
+    width: 320px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Icon (Soft) */
+.icon {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    background: rgba(0, 255, 150, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #4cd964;
+}
+
+/* Text */
+h2 {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+p {
+    color: #bcded6;
+    font-size: 14px;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #4cd964;
+    color: #0f2027;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #38c172;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <div class="icon">&#10004;</div>
+    
+    <h2>Success</h2>
+    <p>Your account has been created successfully</p>
+
+    <button onclick="window.location.href='login.html'">
+        Go to Login
+    </button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Glass Effect Box */
+.box {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    color: white;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    animation: fadeIn 0.8s ease;
+}
+
+/* Icon Circle */
+.icon {
+
+	
+    font-size: 50px;
+    color: #ff4b2b;   /* 🔥 bright red/orange */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+   
+    animation: pulse 1s infinite;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p {
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,0,0,0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(255,0,0,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,0,0,0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+	<div class="icon">&#9888;</div>
+    <h2>Login Failed</h2>
+    <p>Invalid Username or Password</p>
+    
+    <button onclick="window.location.href='login.html'">
+        Try Again
+    </button>
+</div>
+
+</body>
+</html>

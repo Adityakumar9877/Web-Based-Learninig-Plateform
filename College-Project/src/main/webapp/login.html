@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Web Learning</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+
+*{
+box-sizing:border-box;
+}
+
+body{
+font-family:'Ysabeau',sans-serif;
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+/* animated gradient */
+
+background:linear-gradient(-45deg,#1E3C72);
+background-size:400% 400%;
+animation:bgMove 10s infinite;
+}
+
+/* background animation */
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Main card */
+
+.card{
+display:flex;
+width:900px;
+max-width:95%;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 15px 50px rgba(0,0,0,0.3);
+background:#fff;
+
+/* remove this */
+animation:cardFade 1.2s ease;
+}
+
+/* card animation */
+
+animation:cardFade 1.2s ease;
+}
+
+@keyframes cardFade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Left side */
+
+.left{
+flex:1;
+background:linear-gradient(135deg,#1E3C72,#2A5298);
+color:#fff;
+padding:60px 40px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+position:relative;
+
+animation:slideLeft 1.2s ease;
+}
+
+.left h1{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.left p{
+font-size:16px;
+line-height:1.5;
+}
+
+/* animated circles */
+
+.left::before,.left::after{
+content:'';
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,0.1);
+animation:float 6s infinite ease-in-out;
+}
+
+.left::before{
+width:120px;
+height:120px;
+top:20px;
+left:20px;
+}
+
+.left::after{
+width:200px;
+height:200px;
+bottom:-50px;
+right:-50px;
+animation-delay:2s;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+/* Right side */
+
+.right{
+flex:1;
+padding:60px 40px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+animation:slideRight 1.2s ease;
+}
+
+.right h2{
+margin-bottom:20px;
+font-size:28px;
+color:#1E3C72;
+}
+
+/* inputs */
+
+.input-group{
+position:relative;
+margin-bottom:20px;
+}
+
+.input-group input{
+width:100%;
+padding:12px 40px 12px 12px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+transition:.3s;
+}
+
+/* input focus effect */
+
+.input-group input:focus{
+border-color:#2A5298;
+box-shadow:0 0 8px rgba(42,82,152,0.4);
+outline:none;
+}
+
+.input-group span{
+position:absolute;
+right:12px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+font-size:14px;
+color:#555;
+}
+
+/* buttons */
+
+.button-primary{
+background:#1E3C72;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:10px;
+cursor:pointer;
+width:100%;
+font-size:16px;
+margin-bottom:10px;
+transition:.3s;
+}
+
+.button-primary:hover{
+background:#2A5298;
+transform:scale(1.04);
+}
+
+.button-secondary{
+background:#fff;
+border:1px solid #1E3C72;
+color:#1E3C72;
+padding:12px;
+border-radius:10px;
+cursor:pointer;
+width:100%;
+font-size:16px;
+margin-bottom:10px;
+transition:.3s;
+}
+
+.button-secondary:hover{
+background:#f0f4ff;
+transform:scale(1.03);
+}
+
+/* social buttons */
+
+.social-buttons{
+display:flex;
+gap:10px;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.social-buttons button{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* link */
+
+.link{
+text-align:center;
+font-size:14px;
+}
+
+.link a{
+color:#1E3C72;
+text-decoration:none;
+font-weight:500;
+}
+
+.link a:hover{
+text-decoration:underline;
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.card{
+flex-direction:column;
+width:90%;
+}
+
+.left,.right{
+padding:40px 20px;
+}
+
+}
+
+@keyframes slideLeft{
+
+0%{
+transform:translateX(-120px);
+opacity:0;
+}
+
+100%{
+transform:translateX(0);
+opacity:1;
+}
+
+}
+
+@keyframes slideRight{
+
+0%{
+transform:translateX(120px);
+opacity:0;
+}
+
+100%{
+transform:translateX(0);
+opacity:1;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="left">
+
+<h1>Hello Learners 👋</h1>
+<p>
+Welcome to our Web Learning Platform.<br>
+Learn new skills anytime, anywhere.<br>
+Explore interactive lessons, coding practice, and expert guidance to grow your knowledge.
+</p>
+
+</div>
+
+<div class="right">
+
+<h2>Sign In</h2>
+
+<form action="login" method="post">
+
+<div class="input-group">
+<input type="text" placeholder="Username" name="uname" required>
+</div>
+
+<div class="input-group">
+<input type="password" placeholder="Password" id="pass" name="pass" required>
+<span onclick="togglePassword()">SHOW</span>
+</div>
+
+<button class="button-primary" type="submit">Sign In</button>
+
+</form>
+
+<div style="text-align:center;margin:20px 0;font-size:14px;color:#555;">
+Or login another way
+</div>
+
+<div class="social-buttons">
+
+<button class="button-secondary">
+<img src="https://img.icons8.com/color/20/google-logo.png"> Google
+</button>
+
+<button class="button-secondary">
+<img src="https://img.icons8.com/color/20/facebook-new.png"> Facebook
+</button>
+
+<button class="button-secondary">
+<img src="https://img.icons8.com/ios-glyphs/20/github.png">  GitHub
+</button>
+
+</div>
+
+<div class="link">
+<p>Don't have an account? <a href="reg.html">Sign Up</a></p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function togglePassword(){
+const pw=document.getElementById("pass");
+pw.type = pw.type==="password" ? "text":"password";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Learning Platform - Register</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+overflow:hidden;
+}
+
+/* floating circles animation */
+
+.circle{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,0.1);
+animation:float 6s infinite ease-in-out;
+}
+
+.circle:nth-child(1){
+width:120px;
+height:120px;
+top:10%;
+left:15%;
+}
+
+.circle:nth-child(2){
+width:200px;
+height:200px;
+bottom:10%;
+right:10%;
+animation-delay:2s;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0px);}
+}
+
+/* container */
+
+.container {
+	width: 850px;
+	height: 500px;
+	display: flex;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+	background: white;
+
+	/* bottom to top animation */
+	animation: cardUp 1.2s ease;
+}
+
+/*Animation Added  */
+
+@keyframes cardUp {
+
+0%{
+transform: translateY(120px);
+opacity:0;
+}
+
+100%{
+transform: translateY(0);
+opacity:1;
+}
+
+}
+
+/* left section */
+
+.left{
+flex:1;
+background:linear-gradient(160deg,#1e3c72,#2a5298);
+color:white;
+padding:60px 40px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+animation:slideIn 1.5s ease;
+}
+
+.left h1{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.left p{
+font-size:15px;
+line-height:1.6;
+opacity:0.9;
+}
+
+/* right section */
+
+.right{
+flex:1;
+padding:50px;
+animation:fadeIn 2s ease;
+}
+
+.right h2{
+margin-bottom:25px;
+color:#1e3c72;
+}
+
+/* input fields */
+
+.input-box{
+margin-bottom:18px;
+}
+
+.input-box input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+outline:none;
+transition:0.3s;
+
+}
+
+.input-box input:focus{
+border-color:#2a5298;
+box-shadow:0 0 6px rgba(42,82,152,0.4);
+}
+
+/* button */
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#2a5298;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#1e3c72;
+transform:scale(1.03);
+}
+
+/* login link */
+
+.login{
+margin-top:15px;
+font-size:14px;
+}
+
+.login a{
+color:#2a5298;
+text-decoration:none;
+font-weight:600;
+}
+
+/* animations */
+
+@keyframes slideIn{
+from{
+transform:translateX(-80px);
+opacity:0;
+}
+to{
+transform:translateX(0);
+opacity:1;
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="container">
+
+<div class="left">
+
+<h1> Welcome Learners, Let's Grow</h1>
+<p>
+Join our Web Based Learning Platform and access
+interactive tutorials, coding exercises, and
+professional guidance to improve your skills
+anytime and anywhere.
+</p>
+
+</div>
+
+<div class="right">
+
+<h2>Create Account</h2>
+
+<form action="reg" method="post">
+
+<div class="input-box">
+<input type="text" name="fname" placeholder="First Name" required>
+</div>
+
+<div class="input-box">
+<input type="text" name="lname" placeholder="Last Name" required>
+</div>
+
+<div class="input-box">
+<input type="text" name="uname" placeholder="Username" required>
+</div>
+
+<div class="input-box">
+<input type="password" name="pass" placeholder="Password" required>
+</div>
+
+<button type="submit">Register</button>
+
+<div class="login">
+Already have an account? <a href="login.html">Login</a>
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
